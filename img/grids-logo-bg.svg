@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1001 1001">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: .7;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: #f1f2f2;
+      }
+
+      .cls-5 {
+        fill: #231f20;
+        stroke: #231f20;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        opacity: .9;
+      }
+
+      .cls-3 {
+        opacity: .6;
+      }
+
+      .cls-4 {
+        opacity: .8;
+      }
+    </style>
+  </defs>
+  <rect class="cls-5" x=".5" y=".5" width="1000" height="1000"/>
+  <g>
+    <rect class="cls-3" x="104.48" y="504.48" width="192.05" height="192.05" rx="34.38" ry="34.38"/>
+    <rect class="cls-1" x="304.48" y="304.48" width="192.05" height="192.05" rx="34.38" ry="34.38"/>
+    <rect class="cls-4" x="504.48" y="504.48" width="192.05" height="192.05" rx="34.38" ry="34.38"/>
+    <rect class="cls-2" x="704.48" y="304.48" width="192.05" height="192.05" rx="34.38" ry="34.38"/>
+  </g>
+</svg>
