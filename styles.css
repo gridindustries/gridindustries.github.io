@@ -258,7 +258,7 @@ palette
 
 /*media queries*/
 
-@media (max-width: 640px) {
+@media (orientation: portrait) {
 
     html {
         overflow-y: visible;
