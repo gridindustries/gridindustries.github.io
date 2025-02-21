@@ -14,7 +14,7 @@ reOffset();
 window.onscroll=function(e){ reOffset(); }
 window.onresize=function(e){ reOffset(); }
     
-ctx.fillStyle='#ffffff';
+ctx.fillStyle='#fff';
     
 // mouse related variables
 var PI2=Math.PI*2;

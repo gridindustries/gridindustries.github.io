@@ -9,12 +9,17 @@
 
 /*global styling*/
 
+html {
+    overflow: hidden;
+}
+
 body {
     z-index: 1;
 }
 
 p {
     position: relative;
+    margin: 0;
     left: 0.5em;
     right: 0.5em;
 }
@@ -34,6 +39,7 @@ a {
     right: 0.5em;
 }
 
+
 a::after {
     content: '';
     position: absolute;
@@ -49,6 +55,49 @@ a:hover::after {
     width: 100%;
     transition-duration: 0.5s;
 }
+
+a.alt {
+    background-color: inherit;
+    border: none;
+    text-decoration: none;
+    color: black;
+    font-family: "Inter", serif;
+    font-style: normal;
+    font-weight: 100;
+    text-align: left;
+    font-size: 3rem;
+    left: 0.5em;
+    right: 0.5em;
+}
+
+a.alt::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    background: black;
+    transition: width 0.2s;
+}
+a.alt:hover::after {
+    width: 100%;
+    transition-duration: 0.5s;
+}
+
+a.logo {
+    position: fixed;
+    width: 100px;
+    height: 50px;
+    top: 0.5em;
+    left: 0.5em;
+    z-index: 2;
+}
+
+a.logo::after {
+    width: 0%;
+}
+
 
 button {
     background-color: inherit;
@@ -67,8 +116,7 @@ button:hover {
     color: black
 }
 
-ul
-{
+li {
 list-style-type: none;
 }
 
@@ -79,12 +127,10 @@ list-style-type: none;
     max-width: 100vw;
     display: flex;
     flex-wrap: wrap;
-    overflow: hidden;
     justify-content: left;
     align-items: center;
     align-content: center;
     font-family: serif;
-    background-color: black;
     color: whitesmoke;
     font-size: 48px;
     animation: fadeinhome 0.75s ease-in forwards;
@@ -95,13 +141,12 @@ list-style-type: none;
 .sub {
     min-height: 100vh;
     max-width: 100vw;
-    overflow: hidden;
     flex-wrap: wrap;
     display:flex;
     justify-content: left;
     align-items: center;
+    align-content: center;
     font-family: serif;
-    background-color: whitesmoke;
     color: black;
     font-size: 48px;
     animation: fadeinsub 0.75s ease-in forwards;
@@ -109,13 +154,16 @@ list-style-type: none;
     position: relative;
 }
 
-.logo {
-    width: 100px;
-    height: 50px;
-    display: block;
-    position: absolute;
-    top: 0.5em;
-    left: 0.5em;
+.i-anim {
+    animation: fadeinfo 0.75s ease-in forwards;
+}
+
+.c-anim {
+    animation: fadecontact 0.75s ease-in forwards;
+}
+
+.m-anim {
+    animation: fademusic 0.75s ease-in forwards;
 }
 
 .alert {
@@ -136,35 +184,6 @@ list-style-type: none;
     position: absolute;
 }
 
-.altlinks {
-    background-color: inherit;
-    border: none;
-    text-decoration: none;
-    color: black;
-    font-family: "Inter", serif;
-    font-style: normal;
-    font-weight: 100;
-    text-align: left;
-    font-size: 3rem;
-    left: 0.5em;
-    right: 0.5em;
-}
-
-.altlinks::after {
-    content: '';
-    position: absolute;
-    height: 2px;
-    left: 0;
-    bottom: 0;
-    width: 0%;
-    background: black;
-    transition: width 0.2s;
-}
-.altlinks:hover::after {
-    width: 100%;
-    transition-duration: 0.5s;
-}
-
 /*fonts*/
 
 .inter {
@@ -183,7 +202,15 @@ list-style-type: none;
     text-align: center;
 }
 
-/*keyframe referencing*/
+/*
+keyframe referencing
+palette
+#000000: sub text or main bg
+#f5f5f5: mainntext or sub bg
+#f57500: safety orange - secondary
+#aad922: yellow green - secondary
+#92140c: penn red - tertiary
+*/
 
 @keyframes fadeinhome{
     0%{
@@ -192,11 +219,11 @@ list-style-type: none;
     }
     100%{
       opacity:1;
-      background-color: black;
+      background-color: #000;
     }
 }
 
-@keyframes fadeinsub{
+@keyframes fadeinfo{
     0%{
       opacity:0;
       background-color: black;
@@ -207,20 +234,78 @@ list-style-type: none;
     }
 }
 
+@keyframes fadecontact{
+    0%{
+      opacity:0;
+      background-color: black;
+    }
+    100%{
+      opacity:1;
+      background-color: #aad922;
+    }
+}
+
+@keyframes fademusic{
+    0%{
+      opacity:0;
+      background-color: black;
+    }
+    100%{
+      opacity:1;
+      background-color: #ff810a;
+    }
+}
+
 /*media queries*/
 
-@media (max-width: 430px) {
+@media (max-width: 640px) {
+
+    html {
+        overflow-y: visible;
+    }
+
+    .sub {
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .home {
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
     a {
-        font-size: 6rem;
+        font-size: 4rem;
+        left: 0;
     }
 
-    .altlinks {
-        font-size: 6rem;
+    a.logo {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 150px;
+        height: 75px;
+        top: 0.5em;
+        left: 0.5em;
+        z-index: 2;
     }
 
-    .logo {
-        width: 200px;
-        height: 100px;
+    p {
+        font-size: 4rem;
+        padding-top: 1.5em;
+        margin: auto;
+    }
+
+    a.alt {
+        font-size: 4rem;
+        left: 0;
+    }
+
+    #canvas {
+        width: 0;
+        height: 0;
     }
 
 }
