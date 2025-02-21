@@ -285,9 +285,9 @@ palette
         display: flex;
         flex-direction: column;
         margin: auto;
-        width: 150px;
-        height: 75px;
-        top: 0.5em;
+        width: 300px;
+        height: 150px;
+        top: 2em;
         left: 0.5em;
         z-index: 2;
     }
