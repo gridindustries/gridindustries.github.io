@@ -1,20 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="img/grids-logo-mini.svg" type="image/svg+xml">
-  <title>grids</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Archive — links to music, work, social accounts, notes, and other projects.">
+  <title>ARCHIVE — grids.moe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="home">
-  <div>
-    <a class="logo" href="index.html"><img src="img/grids-logo-trnsp.svg" href="index.html"></a>
-  </div>
-  <div class="inter">
-    <li><a href="info.html">info</a></li>
-    <li><a href="contact.html" >contact</a></li>
-    <li><a href="music.html">music</a></li>
-  </div>
-  <canvas id="canvas" width="2000" height="2000"></canvas>
-  <script src="codemain.js"></script>
+<body>
+  <div class="page-field" aria-hidden="true"></div>
+  <div class="orb-field" id="orbField" aria-hidden="true"></div>
+
+  <main class="card-shell">
+    <header class="masthead">
+      <h1 class="masthead__title">ARCHIVE</h1>
+      <div class="masthead__spectrum" aria-hidden="true"></div>
+      <p class="masthead__deck">you can find me in these places</p>
+    </header>
+
+    <nav class="directory" aria-label="Places to find me online">
+      <a class="directory-row" href="https://botnet.bandcamp.com/" target="_blank" rel="noopener noreferrer">
+        <span class="directory-row__body">
+          <span class="directory-row__title">Bandcamp</span>
+          <span class="directory-row__meta">music / releases / botnet</span>
+        </span>
+        <span class="directory-row__arrow" aria-hidden="true">↗</span>
+      </a>
+
+      <a class="directory-row" href="misc/index.html">
+        <span class="directory-row__body">
+          <span class="directory-row__title">Portfolio</span>
+          <span class="directory-row__meta">work / systems / infrastructure</span>
+        </span>
+        <span class="directory-row__arrow" aria-hidden="true">↗</span>
+      </a>
+
+      <a class="directory-row" href="https://twitter.com/slumsoup" target="_blank" rel="noopener noreferrer">
+        <span class="directory-row__body">
+          <span class="directory-row__title">Twitter</span>
+          <span class="directory-row__meta">@slumsoup</span>
+        </span>
+        <span class="directory-row__arrow" aria-hidden="true">↗</span>
+      </a>
+
+      <a class="directory-row" href="https://www.instagram.com/botnetarchive/" target="_blank" rel="noopener noreferrer">
+        <span class="directory-row__body">
+          <span class="directory-row__title">Instagram</span>
+          <span class="directory-row__meta">@botnetarchive</span>
+        </span>
+        <span class="directory-row__arrow" aria-hidden="true">↗</span>
+      </a>
+
+      <a class="directory-row" href="misc/index.html">
+        <span class="directory-row__body">
+          <span class="directory-row__title">Obsidian</span>
+          <span class="directory-row__meta">notes / writing / collected thoughts</span>
+        </span>
+        <span class="directory-row__arrow" aria-hidden="true">↗</span>
+      </a>
+
+      <a class="directory-row" href="misc/index.html">
+        <span class="directory-row__body">
+          <span class="directory-row__title">Misc.</span>
+          <span class="directory-row__meta">other things</span>
+        </span>
+        <span class="directory-row__arrow" aria-hidden="true">↗</span>
+      </a>
+    </nav>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span></span>
+      <span>grids.moe</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
 </body>
-</html>  
+</html>
